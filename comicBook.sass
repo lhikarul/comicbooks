@@ -1,0 +1,174 @@
+$colorGreen : #50ff44
+
+@mixin flexBox
+  display: flex
+  justify-content: center
+  align-items: flex-start
+
+
+html,body 
+  margin: 0
+  width: 100%
+  // height: 100%
+  background-color: #F2F2F2
+  
+.container
+  max-width: 1024px
+  margin: 0 auto
+img
+  width: 100%
+  height: auto
+
+.d-none
+  display: none
+  
+  // comtic-index 
+#header
+  background-color: #000
+  color: $colorGreen
+  text-align: center
+  font-size: 36px
+  height: 74px
+  line-height: 74px
+  
+#comic
+  margin-top: 28px
+  .container
+    +flexBox
+    .cover
+      border: 4px solid #000
+      width: 292px
+    .intro
+      h1
+        background-color: #000
+        margin: 0
+        padding-left: 20px
+        color: white
+        width: 317px
+        height: 52px
+        font-size: 36px
+        line-height: 52px
+      h3
+        font-size: 16px
+        line-height: 24px
+        padding-left: 20px
+        span
+          margin-left: 20px
+          font-weight: normal
+      .summary
+        width: 300px
+        padding-left: 20px
+      
+      
+#chapters
+  .container
+    +flexBox
+    .row
+      margin-left: -16px
+    h2
+      background-color: #000
+      margin: 0
+      margin-top: 28px
+      color: white
+      font-size: 24px
+      width: 181px
+      height: 44px
+      line-height: 44px
+      text-align: center
+    .chapters
+      border: 4px solid #000
+      box-sizing: border-box
+      padding: 22px 24px
+      width: 620px
+      height: 106px
+      h3
+        margin: 0
+        font-size: 16px
+        cursor: pointer
+        padding: 10px
+        &:hover
+          background-color: #000
+          color: white
+          span
+            color: #000
+        span
+          background-color: $colorGreen
+          margin-left: 16px
+          font-size: 14px
+          padding: 5px
+    
+// comic-content
+#reading
+  .page-index
+    +flexBox
+    justify-content: flex-start
+    margin-top: 24px
+    line-height: 35px
+  h3
+    margin: 0
+    font-size: 20px
+    cursor: pointer
+    &:hover
+      color: $colorGreen
+    
+  select
+    width: 127px
+    height: 35px
+  
+  #view-mode
+    margin-left: 30px
+    appearance: none
+    width: 20px
+    height: 20px
+    border: 2px solid #000
+    border-radius: 50%
+    outline: none
+    &:checked
+      background-color: $colorGreen
+      border-color: $colorGreen
+  label
+    line-height: 25px
+    
+  .page-reading
+    +flexBox
+    align-items: center
+    margin-top : 32px
+    .left-arrow,.right-arrow
+      font-size: 80px
+      &:hover
+        color: $colorGreen
+        background-color: #000
+        
+    
+#comic-page
+  .pageView
+    +flexBox
+    justify-content: flex-start
+    padding: 0
+    overflow: auto
+    text-align: center
+    li
+      margin-right: 20px
+      list-style: none
+
+      img
+        width: 80px
+        opacity: 0.5
+        &.active
+          border: 4px solid #000
+        &:hover
+          opacity: 1
+        
+body.dark
+  background-color: #000
+  color: white
+  #header
+    background-color: $colorGreen
+    color: #000
+  .pageView
+    img.active
+      border: 4px solid $colorGreen !important
+
+
+    
+      

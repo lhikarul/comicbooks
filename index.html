@@ -1,37 +1,73 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>漫畫閱讀器</title>
+	<link rel="stylesheet" href="comicBook.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
 
-You can use the [editor on GitHub](https://github.com/lhikarul/comicbooks/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lhikarul/comicbooks/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+	<div id="header">Comicomic</div>
+	<div id="comic-index">
+	  <div id="comic">
+	    <div class="container">
+	      <div class="cover"><img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/comic%20cover.png"/></div>
+	      <div class="intro">
+	        <h1>MY HEXSCHOOL</h1>
+	        <h3>Genres<span>Fusce/vehicular/dolo</span></h3>
+	        <h3>Author<span>Namae Shiranai</span></h3>
+	        <h3>Status<span>Ongoing</span></h3>
+	        <h3>Rate<span>★★★★★</span></h3>
+	        <h3>Summary</h3>
+	        <div class="summary">
+	          <p>If your banker breaks, you snap; if your apothecary by mistake sends you poison in your pills, you die.</p>
+	          <p>Therefore, I say, I saw that this situation of mine was the precise situation of every mortal that has this Siamese connexion with a plurality of other mortals.</p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div id="chapters">
+	    <div class="container">
+	      <div class="row">
+	        <h2>ALL Chapters</h2>
+	        <div class="chapters">
+	          <h3 class="chapter">Chapter 1 : The F2E Challenge Start!</h3>
+	          <h3 class="chapter">Chapter 2 : Todo List is Going Crazy!<span>NEW</span></h3>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- comic-content-->
+	<div class="d-none" id="comic-content">
+	  <div id="reading">
+	    <div class="container">
+	      <div class="page-index">
+	        <h3>My Hexschool ➤</h3>
+	        <select class="custom-select-chapter">
+	          <option value="Chapter 1">Chapter 1</option>
+	          <option value="Chapter 2">Chapter 2</option>
+	        </select>
+	        <select class="custom-select-page"></select>
+	        <input type="checkbox" id="view-mode" onclick="changeToDark()"/>
+	        <label for="view-mode">dark-mode</label>
+	      </div>
+	      <div class="page-reading">
+	        <div class="left-arrow">⬅ </div>
+	        <div class="img"><img src="https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/storyboard-1.png" data-page="1"/></div>
+	        <div class="right-arrow">➡</div>
+	      </div>
+	      <div class="turnPage"></div>
+	    </div>
+	  </div>
+	  <div id="comic-page">
+	    <div class="container">
+	      <ul class="pageView"></ul>
+	    </div>
+	  </div>
+	</div>
+	
+	<script src="comicBook.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  background-color: #F2F2F2; }
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+.d-none {
+  display: none; }
+
+#header {
+  background-color: #000;
+  color: #50ff44;
+  text-align: center;
+  font-size: 36px;
+  height: 74px;
+  line-height: 74px; }
+
+#comic {
+  margin-top: 28px; }
+  #comic .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    #comic .container .cover {
+      border: 4px solid #000;
+      width: 292px; }
+    #comic .container .intro h1 {
+      background-color: #000;
+      margin: 0;
+      padding-left: 20px;
+      color: white;
+      width: 317px;
+      height: 52px;
+      font-size: 36px;
+      line-height: 52px; }
+    #comic .container .intro h3 {
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 20px; }
+      #comic .container .intro h3 span {
+        margin-left: 20px;
+        font-weight: normal; }
+    #comic .container .intro .summary {
+      width: 300px;
+      padding-left: 20px; }
+
+#chapters .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  #chapters .container .row {
+    margin-left: -16px; }
+  #chapters .container h2 {
+    background-color: #000;
+    margin: 0;
+    margin-top: 28px;
+    color: white;
+    font-size: 24px;
+    width: 181px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center; }
+  #chapters .container .chapters {
+    border: 4px solid #000;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 22px 24px;
+    width: 620px;
+    height: 106px; }
+    #chapters .container .chapters h3 {
+      margin: 0;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 10px; }
+      #chapters .container .chapters h3:hover {
+        background-color: #000;
+        color: white; }
+        #chapters .container .chapters h3:hover span {
+          color: #000; }
+      #chapters .container .chapters h3 span {
+        background-color: #50ff44;
+        margin-left: 16px;
+        font-size: 14px;
+        padding: 5px; }
+
+#reading .page-index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-top: 24px;
+  line-height: 35px; }
+
+#reading h3 {
+  margin: 0;
+  font-size: 20px;
+  cursor: pointer; }
+  #reading h3:hover {
+    color: #50ff44; }
+
+#reading select {
+  width: 127px;
+  height: 35px; }
+
+#reading #view-mode {
+  margin-left: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  outline: none; }
+  #reading #view-mode:checked {
+    background-color: #50ff44;
+    border-color: #50ff44; }
+
+#reading label {
+  line-height: 25px; }
+
+#reading .page-reading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 32px; }
+  #reading .page-reading .left-arrow, #reading .page-reading .right-arrow {
+    font-size: 80px; }
+    #reading .page-reading .left-arrow:hover, #reading .page-reading .right-arrow:hover {
+      color: #50ff44;
+      background-color: #000; }
+
+#comic-page .pageView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 0;
+  overflow: auto;
+  text-align: center; }
+  #comic-page .pageView li {
+    margin-right: 20px;
+    list-style: none; }
+    #comic-page .pageView li img {
+      width: 80px;
+      opacity: 0.5; }
+      #comic-page .pageView li img.active {
+        border: 4px solid #000; }
+      #comic-page .pageView li img:hover {
+        opacity: 1; }
+
+body.dark {
+  background-color: #000;
+  color: white; }
+  body.dark #header {
+    background-color: #50ff44;
+    color: #000; }
+  body.dark .pageView img.active {
+    border: 4px solid #50ff44 !important; }
