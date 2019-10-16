@@ -4,8 +4,6 @@
 
 [漫畫閱讀器(GitHub](https://lhikarul.github.io/comicbooks/)
 
-[漫畫閱讀器(codepen)](https://codepen.io/lhiakrul/pen/jvRLRP)
-
 1. 使用pug搭配sass語言開發版型
 
 2. JavaScript撰寫網頁的互動功能
